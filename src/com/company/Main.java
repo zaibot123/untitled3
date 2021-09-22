@@ -1,7 +1,9 @@
 package com.company;
+
 import java.io.FileReader;
 import java.io.FileNotFoundException;
 import java.io.File;
+import java.util.Scanner;
 
 
 public class Main {
@@ -20,7 +22,23 @@ public class Main {
         } finally {
             System.out.println("finished try/catch");
         }
+
         file.getName();
+        while (true) {
+            try {
+                Scanner s = new Scanner(System.in);
+                System.out.println("type nominator");
+                int n = s.nextInt();
+                System.out.println("Type denominator");
+                int d = s.nextInt();
+                int r = n / d;
+                System.out.println(r);
+            } catch (Exception e) {
+                System.out.println(e.toString());
+
+            }
+
+        }
 
 
     }
